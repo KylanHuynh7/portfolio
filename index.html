@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <title>Kylan Huynh: Personal site and portfolio</title>
+  <meta name="description" content="Kylan Huynh — Data Science, UC San Diego. Sports analytics, research, and quietly built software." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;1,400&display=swap" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20fill='%23fafaf9'/%3E%3Ctext%20x='4'%20y='22'%20font-family='IBM%20Plex%20Mono,%20monospace'%20font-size='18'%20font-weight='700'%20fill='%230a0a0a'%3EKH%3C/text%3E%3Crect%20x='25'%20y='8'%20width='4'%20height='4'%20fill='%237a1a1a'/%3E%3C/svg%3E" />
+</head>
+<body data-root="">
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       Scoreboard topbar — feels like a stadium status line
+       ═══════════════════════════════════════════════════════════ -->
+  <header class="scoreboard">
+    <div class="scoreboard__cell">
+      <span class="cell__label">LOC</span>
+      <span class="cell__value">LA&nbsp;JOLLA,&nbsp;CA</span>
+    </div>
+    <div class="scoreboard__cell">
+      <span class="cell__label">TIME</span>
+      <span class="cell__value" id="clock">--:--:--&nbsp;PT</span>
+    </div>
+    <div class="scoreboard__cell">
+      <span class="cell__label">STATUS</span>
+      <span class="cell__value"><span class="dot dot--live"></span>ONLINE</span>
+    </div>
+    <nav class="scoreboard__nav" aria-label="Primary">
+      <a href="./" aria-current="page">01&nbsp;home</a>
+      <a href="projects/">02&nbsp;projects</a>
+      <a href="contact/">03&nbsp;contact</a>
+      <a href="resume/">04&nbsp;resume</a>
+      <a href="https://github.com/KylanHuynh7" target="_blank" rel="noopener noreferrer">github&nbsp;↗</a>
+    </nav>
+  </header>
+
+  <main>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         01 · DOSSIER — personal data sheet hero
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="dossier" id="dossier">
+      <div class="section-bar">
+        <span class="section-bar__num">§ 01</span>
+        <h2 class="section-bar__label">DOSSIER</h2>
+        <span class="section-bar__rule"></span>
+        <span class="section-bar__meta">FILE&nbsp;001 · KH</span>
+      </div>
+
+      <div class="dossier__layout">
+
+        <div class="dossier__name">
+          <h1>
+            <span class="dossier__first">Kylan</span>
+            <span class="dossier__last">Huynh.</span>
+          </h1>
+          <p class="dossier__subtitle">
+            Data scientist in training. Scaling personal interests into
+            broader patterns — the kind of work where curiosity itself
+            becomes the dataset.
+          </p>
+        </div>
+
+        <div class="dossier__side">
+          <img class="portrait" src="images/kylan.jpg"
+               alt="Portrait of Kylan Huynh, smiling, photographed from the shoulders up." />
+          <div class="dossier__sheet">
+            <dl class="datasheet">
+              <div class="datasheet__row"><dt>NAME</dt>             <dd>Kylan Huynh</dd></div>
+              <div class="datasheet__row"><dt>YEAR</dt>             <dd>Class of 2028</dd></div>
+              <div class="datasheet__row"><dt>MAJOR</dt>            <dd>Data Science, B.S.</dd></div>
+              <div class="datasheet__row"><dt>INSTITUTION</dt>      <dd>UC San Diego</dd></div>
+              <div class="datasheet__row"><dt>FOCUS</dt>            <dd>Sports analytics · Statistics · ML</dd></div>
+              <div class="datasheet__row"><dt>STATUS</dt>           <dd>Sophomore <span class="arrow">→</span> Junior</dd></div>
+              <div class="datasheet__row"><dt>LOCATION</dt>         <dd>La Jolla, CA</dd></div>
+              <div class="datasheet__row datasheet__row--hl">
+                <dt>AVAILABLE</dt>
+                <dd><span class="dot dot--live"></span>Summer 2027 internship</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dossier__cta">
+        <a href="projects/" class="link link--arrow">read the work</a>
+        <a href="contact/" class="link link--arrow">get in touch</a>
+        <a href="resume/" class="link link--arrow">resume</a>
+        <span class="dossier__hint">press <kbd>`</kbd> for the terminal</span>
+      </div>
+
+      <p class="dossier__transition">
+        <span class="arrow-down" aria-hidden="true">↓</span>decoding my process<span class="arrow-down" aria-hidden="true">↓</span>
+      </p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         02 · LOG — quiet timeline
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="log" id="log">
+      <div class="section-bar">
+        <span class="section-bar__num">§ 02</span>
+        <h2 class="section-bar__label">LOG</h2>
+        <span class="section-bar__rule"></span>
+        <span class="section-bar__meta">2024 → present</span>
+      </div>
+
+      <ol class="log__list">
+        <li class="log__row log__row--current">
+          <span class="log__when mono">2026 · spring</span>
+          <div class="log__what">
+            <div class="log__item">
+              <strong>Variance97</strong> begins. Sophomore year wrapping
+              up; open to a <em>summer&nbsp;'27 internship</em> in data,
+              analytics, or research.
+            </div>
+            <div class="log__item">
+              Joined <strong>UC San Diego Athletics</strong> as a
+              Basketball Data Analyst under Prof. Bradley Voytek —
+              building scouting tools for the men's and women's programs.
+              Ongoing.
+            </div>
+          </div>
+        </li>
+        <li class="log__row">
+          <span class="log__when mono">2026 · winter</span>
+          <div class="log__what">
+            <div class="log__item">
+              Started as a <strong>data consultant</strong> on a
+              species-imputation project — building a geospatial pipeline
+              on Google Earth Engine to impute missing observations from
+              satellite data. Continuing into summer&nbsp;'26.
+            </div>
+          </div>
+        </li>
+        <li class="log__row">
+          <span class="log__when mono">2025 · fall</span>
+          <div class="log__what">
+            <div class="log__item">
+              Shipped <strong>SayStroop</strong> with a small team. Real
+              participants, real data, a real paper.
+            </div>
+          </div>
+        </li>
+        <li class="log__row">
+          <span class="log__when mono">2024 · sept</span>
+          <div class="log__what">
+            <div class="log__item">
+              Started at <strong>UC San Diego</strong>, Data Science B.S.
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         03 · STACK — quiet inventory
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="stack" id="stack">
+      <div class="section-bar">
+        <span class="section-bar__num">§ 03</span>
+        <h2 class="section-bar__label">STACK</h2>
+        <span class="section-bar__rule"></span>
+        <span class="section-bar__meta">tools&nbsp;·&nbsp;languages</span>
+      </div>
+
+      <div class="stack__grid">
+        <div class="stack__group">
+          <h3 class="mono small group-label">LANGUAGES</h3>
+          <ul class="tags">
+            <li>Python</li><li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="stack__group">
+          <h3 class="mono small group-label">DATA</h3>
+          <ul class="tags">
+            <li>Pandas</li><li>NumPy</li><li>scikit-learn</li><li>PyTorch <span class="muted">(learning)</span></li><li>Jupyter</li><li>Matplotlib</li><li>Seaborn</li>
+          </ul>
+        </div>
+        <div class="stack__group">
+          <h3 class="mono small group-label">PLATFORMS</h3>
+          <ul class="tags">
+            <li>Google Earth Engine</li><li>Supabase</li><li>Postgres</li><li>Streamlit</li><li>OpenAI Whisper</li>
+          </ul>
+        </div>
+        <div class="stack__group">
+          <h3 class="mono small group-label">CLI · WORKFLOW</h3>
+          <ul class="tags">
+            <li>git</li><li>zsh</li><li>tmux</li><li>VS Code</li><li>vim</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         04 · NOW — Letterboxd-style consumption diary
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="now" id="now">
+      <div class="section-bar">
+        <span class="section-bar__num">§ 04</span>
+        <h2 class="section-bar__label">NOW</h2>
+        <span class="section-bar__rule"></span>
+        <span class="section-bar__meta">UPDATED&nbsp;<span id="now-updated">—</span></span>
+      </div>
+
+      <p class="now__lede">
+        Less of a log, more of a desk — a few things in rotation right now,
+        arranged the way I'd actually arrange them. If you've scrolled this far,
+        you're getting the off-the-clock version.
+      </p>
+
+      <div class="now__spread">
+
+        <article class="note" style="--span:7" id="now-letterboxd" data-letterboxd-user="kyyllannn">
+          <span class="note__tag">ON THE COUCH</span>
+          <h3 class="note__title">Recent Watches</h3>
+          <p class="note__meta">letterboxd · kyyllannn</p>
+          <ol class="note__diary" data-lb-list>
+            <li class="note__diary-row note__diary-row--placeholder">
+              <span class="note__diary-title">loading diary…</span>
+            </li>
+          </ol>
+          <p class="note__voice">
+            latest from the letterboxd diary — pulled fresh each visit.
+          </p>
+        </article>
+
+        <article class="note" style="--span:5">
+          <span class="note__tag">IN MY EARS</span>
+          <h3 class="note__title">Ca$ino</h3>
+          <p class="note__meta">Baby Keem · 2026</p>
+          <p class="note__rating">
+            <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <span class="mono small">on repeat</span>
+          </p>
+          <p class="note__voice">
+            the current rotation.
+          </p>
+        </article>
+
+        <article class="note" style="--span:5">
+          <span class="note__tag">ON MY DESK</span>
+          <h3 class="note__title"><em>Men in Dark Times</em></h3>
+          <p class="note__meta">Hannah Arendt · 1968</p>
+          <p class="note__rating mono small">in&nbsp;progress</p>
+          <p class="note__voice">
+            portraits of people who kept their light on when the world dimmed.
+            essays that ask the right questions.
+          </p>
+        </article>
+
+        <article class="note note--sports" style="--span:7">
+          <span class="note__tag">THE STADIUM · LA-CODED</span>
+          <div class="stadium">
+            <div class="team" data-sport="NBA">
+              <span class="team__league">NBA</span>
+              <span class="team__name">Lakers</span>
+              <span class="team__action" data-sport-action>—</span>
+            </div>
+            <div class="team" data-sport="MLB">
+              <span class="team__league">MLB</span>
+              <span class="team__name">Dodgers</span>
+              <span class="team__action" data-sport-action>—</span>
+            </div>
+            <div class="team" data-sport="NFL">
+              <span class="team__league">NFL</span>
+              <span class="team__name">Rams</span>
+              <span class="team__action" data-sport-action>—</span>
+            </div>
+            <div class="team" data-sport="NHL">
+              <span class="team__league">NHL</span>
+              <span class="team__name">Kings</span>
+              <span class="team__action" data-sport-action>—</span>
+            </div>
+          </div>
+          <p class="note__voice">
+            all four sports, all in LA. the calendar keeps me company year-round —
+            this row updates itself as seasons start and end.
+          </p>
+        </article>
+
+        <article class="note note--build" style="--span:12">
+          <span class="note__tag">AT THE WORKBENCH</span>
+          <h3 class="note__title">Ghostfork</h3>
+          <p class="note__meta">data project · roki sasaki · npb → mlb · in progress</p>
+          <p class="note__voice">
+            tracing the rookie arc — splitter shape, velocity dip, workload translation.
+            narrative-led, data-honest. variance97 lives; this is the next one.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════════════════════════ -->
+    <footer class="foot">
+    <div class="foot__rule"></div>
+    <div class="foot__cols">
+      <p class="foot__col">
+        <span class="foot__label mono">FILE</span>
+        DOSSIER&nbsp;·&nbsp;001&nbsp;·&nbsp;KH
+      </p>
+      <p class="foot__col">
+        <span class="foot__label mono">BUILT&nbsp;WITH</span>
+        html&nbsp;·&nbsp;css&nbsp;·&nbsp;js&nbsp;·&nbsp;0&nbsp;frameworks
+      </p>
+      <p class="foot__col">
+        <span class="foot__label mono">TYPE</span>
+        IBM&nbsp;Plex&nbsp;Mono&nbsp;·&nbsp;Plex&nbsp;Sans
+      </p>
+      <p class="foot__col">
+        <span class="foot__label mono">REV</span>
+        <span id="last-edit">—</span>
+      </p>
+    </div>
+    <div class="foot__sig">
+      <p class="foot__epitaph">the future is yours.</p>
+      <p class="foot__copyright mono small">© <span id="year">2026</span> · Kylan&nbsp;Huynh · all rights reserved</p>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       Terminal — summoned by `, easter eggs included
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="terminal" id="terminal" hidden>
+    <div class="terminal__frame">
+      <div class="terminal__bar">
+        <span class="mono small">kylan@dossier ~ %</span>
+        <button class="terminal__close" id="terminal-close" aria-label="Close">[esc]</button>
+      </div>
+      <div class="terminal__body" id="terminal-body">
+        <div class="terminal__line">
+          <span class="terminal__prompt">$</span>
+          <span>welcome to dossier v1.0 · type <em>help</em> for commands.</span>
+        </div>
+      </div>
+      <form class="terminal__input" id="terminal-form">
+        <span class="terminal__prompt">$</span>
+        <input id="terminal-cmd" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="help"/>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

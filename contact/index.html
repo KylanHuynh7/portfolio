@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <title>Contact · Kylan Huynh</title>
+  <meta name="description" content="Get in touch with Kylan Huynh." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;1,400&display=swap" />
+
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20fill='%23fafaf9'/%3E%3Ctext%20x='4'%20y='22'%20font-family='IBM%20Plex%20Mono,%20monospace'%20font-size='18'%20font-weight='700'%20fill='%230a0a0a'%3EKH%3C/text%3E%3Crect%20x='25'%20y='8'%20width='4'%20height='4'%20fill='%237a1a1a'/%3E%3C/svg%3E" />
+</head>
+<body data-root="../">
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       Scoreboard topbar — feels like a stadium status line
+       ═══════════════════════════════════════════════════════════ -->
+  <header class="scoreboard">
+    <div class="scoreboard__cell">
+      <span class="cell__label">LOC</span>
+      <span class="cell__value">LA&nbsp;JOLLA,&nbsp;CA</span>
+    </div>
+    <div class="scoreboard__cell">
+      <span class="cell__label">TIME</span>
+      <span class="cell__value" id="clock">--:--:--&nbsp;PT</span>
+    </div>
+    <div class="scoreboard__cell">
+      <span class="cell__label">STATUS</span>
+      <span class="cell__value"><span class="dot dot--live"></span>ONLINE</span>
+    </div>
+    <nav class="scoreboard__nav" aria-label="Primary">
+      <a href="../">01&nbsp;home</a>
+      <a href="../projects/">02&nbsp;projects</a>
+      <a href="../contact/" aria-current="page">03&nbsp;contact</a>
+      <a href="../resume/">04&nbsp;resume</a>
+      <a href="https://github.com/KylanHuynh7" target="_blank" rel="noopener noreferrer">github&nbsp;↗</a>
+    </nav>
+  </header>
+
+  <main>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         CONTACT
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="contact" id="contact">
+      <h1 class="page-title">Contact</h1>
+
+      <div class="section-bar">
+        <span class="section-bar__num">§ 01</span>
+        <h2 class="section-bar__label">CONTACT</h2>
+        <span class="section-bar__rule"></span>
+        <span class="section-bar__meta">always&nbsp;open</span>
+      </div>
+
+      <div class="contact__inner">
+        <p class="contact__line">
+          Currently seeking a <span class="hl">Summer&nbsp;2027&nbsp;data&nbsp;internship.</span>
+          Always happy to talk about sports, books, films, or anything you
+          think I'd find interesting.
+        </p>
+
+        <form class="contact-form" action="mailto:huynh.kylan7@gmail.com" method="POST" enctype="text/plain">
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Subject
+            <input name="subject" />
+          </label>
+          <label>
+            Message
+            <textarea name="body"></textarea>
+          </label>
+          <button>Send</button>
+        </form>
+
+        <a href="mailto:huynh.kylan7@gmail.com" class="contact__email" data-cursor>
+          <span class="contact__email-label mono">→ EMAIL</span>
+          <span class="contact__email-addr">huynh.kylan7@gmail.com</span>
+        </a>
+
+        <ul class="contact__links">
+          <li><span class="mono small">GH</span><a href="https://github.com/KylanHuynh7" target="_blank" rel="noopener noreferrer" data-cursor>github.com/KylanHuynh7</a></li>
+          <li><span class="mono small">LI</span><a href="https://www.linkedin.com/in/kylan-huynh7/" target="_blank" rel="noopener noreferrer" data-cursor>linkedin.com/in/kylan-huynh7</a></li>
+          <li><span class="mono small">CV</span><a href="../resume/" data-cursor>resume</a></li>
+          <li><span class="mono small">LB</span><a href="https://letterboxd.com/kyyllannn/" target="_blank" rel="noopener noreferrer" data-cursor>letterboxd.com/kyyllannn</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════════════════════════ -->
+    <footer class="foot">
+    <div class="foot__rule"></div>
+    <div class="foot__cols">
+      <p class="foot__col">
+        <span class="foot__label mono">FILE</span>
+        DOSSIER&nbsp;·&nbsp;001&nbsp;·&nbsp;KH
+      </p>
+      <p class="foot__col">
+        <span class="foot__label mono">BUILT&nbsp;WITH</span>
+        html&nbsp;·&nbsp;css&nbsp;·&nbsp;js&nbsp;·&nbsp;0&nbsp;frameworks
+      </p>
+      <p class="foot__col">
+        <span class="foot__label mono">TYPE</span>
+        IBM&nbsp;Plex&nbsp;Mono&nbsp;·&nbsp;Plex&nbsp;Sans
+      </p>
+      <p class="foot__col">
+        <span class="foot__label mono">REV</span>
+        <span id="last-edit">—</span>
+      </p>
+    </div>
+    <div class="foot__sig">
+      <p class="foot__epitaph">the future is yours.</p>
+      <p class="foot__copyright mono small">© <span id="year">2026</span> · Kylan&nbsp;Huynh · all rights reserved</p>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       Terminal — summoned by `, easter eggs included
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="terminal" id="terminal" hidden>
+    <div class="terminal__frame">
+      <div class="terminal__bar">
+        <span class="mono small">kylan@dossier ~ %</span>
+        <button class="terminal__close" id="terminal-close" aria-label="Close">[esc]</button>
+      </div>
+      <div class="terminal__body" id="terminal-body">
+        <div class="terminal__line">
+          <span class="terminal__prompt">$</span>
+          <span>welcome to dossier v1.0 · type <em>help</em> for commands.</span>
+        </div>
+      </div>
+      <form class="terminal__input" id="terminal-form">
+        <span class="terminal__prompt">$</span>
+        <input id="terminal-cmd" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="help"/>
+      </form>
+    </div>
+  </div>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>

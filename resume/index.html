@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
+  <title>Resume · Kylan Huynh</title>
+  <meta name="description" content="Resume of Kylan Huynh — Data Science, UC San Diego." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;1,400&display=swap" />
+
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20fill='%23fafaf9'/%3E%3Ctext%20x='4'%20y='22'%20font-family='IBM%20Plex%20Mono,%20monospace'%20font-size='18'%20font-weight='700'%20fill='%230a0a0a'%3EKH%3C/text%3E%3Crect%20x='25'%20y='8'%20width='4'%20height='4'%20fill='%237a1a1a'/%3E%3C/svg%3E" />
+</head>
+<body data-root="../">
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       Scoreboard topbar — feels like a stadium status line
+       ═══════════════════════════════════════════════════════════ -->
+  <header class="scoreboard">
+    <div class="scoreboard__cell">
+      <span class="cell__label">LOC</span>
+      <span class="cell__value">LA&nbsp;JOLLA,&nbsp;CA</span>
+    </div>
+    <div class="scoreboard__cell">
+      <span class="cell__label">TIME</span>
+      <span class="cell__value" id="clock">--:--:--&nbsp;PT</span>
+    </div>
+    <div class="scoreboard__cell">
+      <span class="cell__label">STATUS</span>
+      <span class="cell__value"><span class="dot dot--live"></span>ONLINE</span>
+    </div>
+    <nav class="scoreboard__nav" aria-label="Primary">
+      <a href="../">01&nbsp;home</a>
+      <a href="../projects/">02&nbsp;projects</a>
+      <a href="../contact/">03&nbsp;contact</a>
+      <a href="../resume/" aria-current="page">04&nbsp;resume</a>
+      <a href="https://github.com/KylanHuynh7" target="_blank" rel="noopener noreferrer">github&nbsp;↗</a>
+    </nav>
+  </header>
+
+  <main>
+
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         RESUME
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="resume" id="resume">
+      <header>
+        <h1 class="page-title">Resume</h1>
+        <p class="resume__intro">
+          Data Science B.S. student at UC San Diego working across sports
+          analytics, machine learning research, and full-stack data tools.
+        </p>
+        <ul class="resume__links">
+          <li><a href="mailto:huynh.kylan7@gmail.com">huynh.kylan7@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/kylan-huynh7/" target="_blank" rel="noopener noreferrer">linkedin.com/in/kylan-huynh7</a></li>
+          <li><a href="https://github.com/KylanHuynh7" target="_blank" rel="noopener noreferrer">github.com/KylanHuynh7</a></li>
+          <li><a href="https://drive.google.com/file/d/1eNmOADNJwb8WYFJuJCYg7Ji6FfUJ5Zpd/view?usp=sharing" target="_blank" rel="noopener noreferrer">resume (PDF)</a></li>
+        </ul>
+      </header>
+    </section>
+
+    <section id="education">
+      <div class="section-bar">
+        <span class="section-bar__num">§ 01</span>
+        <h2 class="section-bar__label">EDUCATION</h2>
+        <span class="section-bar__rule"></span>
+        <span class="section-bar__meta">B.S.</span>
+      </div>
+
+      <article class="resume-entry">
+        <header>
+          <h3>University of California, San Diego</h3>
+          <p class="resume-entry__when"><time datetime="2024-09">Sept. 2024</time> – <time datetime="2028-06">June 2028</time></p>
+        </header>
+        <p class="resume-entry__org">Bachelor of Science in Data Science · San Diego, CA</p>
+      </article>
+    </section>
+
+    <section id="experience">
+      <div class="section-bar">
+        <span class="section-bar__num">§ 02</span>
+        <h2 class="section-bar__label">EXPERIENCE</h2>
+        <span class="section-bar__rule"></span>
+        <span class="section-bar__meta">N&nbsp;=&nbsp;2</span>
+      </div>
+
+      <article class="resume-entry">
+        <header>
+          <h3>Basketball Data Analyst</h3>
+          <p class="resume-entry__when"><time datetime="2025-03">Mar. 2025</time> – Present</p>
+        </header>
+        <p class="resume-entry__org">UC San Diego Athletics Dept. · Advisor: Prof. Bradley Voytek · San Diego, CA</p>
+        <ul>
+          <li>Conducted exploratory data analysis on a scraped database of D1 and D2 college basketball players to identify transfer candidates aligned with UCSD's playstyle.</li>
+          <li>Translated coaching staff methodology documents into quantitative filters, applying transitional and archetype multipliers to surface players of interest across conferences.</li>
+          <li>Built an interactive player scouting dashboard featuring PCA-based visualization with position-coded clustering, stat sliders, conference/team filters, and on-click player profiles to support coaching staff recruitment decisions.</li>
+        </ul>
+      </article>
+
+      <article class="resume-entry">
+        <header>
+          <h3>Machine Learning Research Assistant</h3>
+          <p class="resume-entry__when"><time datetime="2026-01">Jan. 2026</time> – Present</p>
+        </header>
+        <p class="resume-entry__org">UC San Diego Natural Reserve System · PI: Dr. Kellie Uyeda · San Diego, CA</p>
+        <ul>
+          <li>Designed and managed an end-to-end machine learning pipeline to predict species occurrence based on environmental niches across the UCSD Natural Reserve System, including Scripps and Mission Bay.</li>
+          <li>Developed an interactive Streamlit application to streamline data visualization, making ecological insights across the four main reserves accessible to both domain experts and the broader community.</li>
+          <li>Engineered model output logic to prioritize rare and underrepresented species in generated CSV reports, directly supporting conservation data analysis workflows.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projects">
+      <div class="section-bar">
+        <span class="section-bar__num">§ 03</span>
+        <h2 class="section-bar__label">PROJECTS</h2>
+        <span class="section-bar__rule"></span>
+        <span class="section-bar__meta">N&nbsp;=&nbsp;3</span>
+      </div>
+
+      <article class="resume-entry">
+        <header>
+          <h3>Nash</h3>
+          <p class="resume-entry__when"><time datetime="2026-08">Aug. 2026</time> – Present</p>
+        </header>
+        <p class="resume-entry__org">
+          Full-Stack Team Balancing &amp; Player Rating System ·
+          <a href="https://github.com/KylanHuynh7/Nash" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+          <a href="https://nash-teams.vercel.app" target="_blank" rel="noopener noreferrer">Live Site</a>
+        </p>
+        <ul>
+          <li>Built and deployed a full-stack rating and team-balancing application (Next.js 16, TypeScript, Drizzle ORM, Neon Postgres, Vercel) covering two sports on a shared 17-player roster, driven entirely from one configuration object per sport so that adding a sport is a config entry rather than a new codebase; 181 unit tests over pure, framework-free logic modules.</li>
+          <li>Implemented team balancing as a hill-climbing swap search to a Nash equilibrium, with a scarcity term pricing each side's <em>best</em> quarterback separately from the team mean; validated against a brute-forced optimum across 40 generated lineups, hitting the optimal split 40/40 and seating the best available arm at quarterback 80/80.</li>
+          <li>Audited attribute independence by correlation and found one rating column was a near-linear transform of another (r = +0.99), silently spending 8.5% of every player's overall rating on a duplicated signal; re-derived the column from the sport's actual mechanics and doubled its residual information with zero change to player rankings.</li>
+          <li>Designed a pairwise-comparison collector (one tokenized link per rater, informativeness-ranked pair selection) that fits crowd-sourced judgments with a Bradley-Terry model, with server-side token validation and passcode-gated editing in production.</li>
+        </ul>
+      </article>
+
+      <article class="resume-entry">
+        <header>
+          <h3>Variance97</h3>
+          <p class="resume-entry__when"><time datetime="2026-01">Jan. 2026</time> – <time datetime="2026-05">May 2026</time></p>
+        </header>
+        <p class="resume-entry__org">
+          Multi-Phase Hockey Analytics Project ·
+          <a href="https://github.com/KylanHuynh7/Variance97" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+          <a href="https://variance97-s26u7gyazbqesy5jvmhggw.streamlit.app/" target="_blank" rel="noopener noreferrer">Live Dashboard</a>
+        </p>
+        <ul>
+          <li>Built an end-to-end data science investigation of Connor McDavid's performance across 478 NHL games, the 2025 Four Nations Face-Off, and the 2026 Winter Olympics to test three hypotheses about championship-game decline.</li>
+          <li>Conducted formal hypothesis testing with Cohen's d effect sizes and Bonferroni correction, including a peer-comparison test against Nathan MacKinnon that overturned the project's original thesis.</li>
+          <li>Diagnosed circular feature engineering in the initial logistic regression and re-trained a Ridge model with gameplay features (opponent strength, rolling form, rest days), collapsing the dominant "Stanley Cup Finals" coefficient from +0.67 to −0.07 and reattributing variance to late-series fatigue and opponent defensive quality.</li>
+          <li>Deployed a self-updating Streamlit dashboard with five interactive pages, backed by an idempotent NHL API pipeline (game logs, boxscore enrichment, team standings) that keeps the dataset live via a single cron'd command.</li>
+        </ul>
+      </article>
+
+      <article class="resume-entry">
+        <header>
+          <h3>SayStroop</h3>
+          <p class="resume-entry__when"><time datetime="2025-09">Sept. 2025</time> – <time datetime="2025-12">Dec. 2025</time></p>
+        </header>
+        <p class="resume-entry__org">
+          Award-Winning Cognitive Science Web App ·
+          <a href="https://github.com/SeojunJaden/SayStroop" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+        <ul>
+          <li>Developed a full-stack website conducting the Stroop Test using voice-based reaction-time measurements with automated audio segmentation.</li>
+          <li>Built a custom voice-activity detection pipeline (inspired by Silero VAD) to resolve Whisper timestamp drift, improving reaction-time accuracy across 1500+ samples.</li>
+          <li>Implemented participant identity verification and data pipeline using Supabase to prevent duplicate submissions and ensure clean data collection.</li>
+          <li>Awarded 2nd place in the Data Science Student Society's quarterly competition and featured on the DSSS website as an award-winning project.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="skills">
+      <div class="section-bar">
+        <span class="section-bar__num">§ 04</span>
+        <h2 class="section-bar__label">TECHNICAL&nbsp;SKILLS</h2>
+        <span class="section-bar__rule"></span>
+        <span class="section-bar__meta">tools&nbsp;·&nbsp;languages</span>
+      </div>
+
+      <dl class="skills">
+        <div><dt>LANGUAGES</dt>              <dd>Python · TypeScript · SQL · Java</dd></div>
+        <div><dt>LIBRARIES · FRAMEWORKS</dt> <dd>pandas · NumPy · scikit-learn · SciPy · Matplotlib · Plotly · React · Next.js</dd></div>
+        <div><dt>DEVELOPER TOOLS</dt>        <dd>Git · PostgreSQL · Drizzle ORM · Vercel · Streamlit · Supabase · Jupyter Notebook · IntelliJ</dd></div>
+      </dl>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════════════════════════ -->
+    <footer class="foot">
+    <div class="foot__rule"></div>
+    <div class="foot__cols">
+      <p class="foot__col">
+        <span class="foot__label mono">FILE</span>
+        DOSSIER&nbsp;·&nbsp;001&nbsp;·&nbsp;KH
+      </p>
+      <p class="foot__col">
+        <span class="foot__label mono">BUILT&nbsp;WITH</span>
+        html&nbsp;·&nbsp;css&nbsp;·&nbsp;js&nbsp;·&nbsp;0&nbsp;frameworks
+      </p>
+      <p class="foot__col">
+        <span class="foot__label mono">TYPE</span>
+        IBM&nbsp;Plex&nbsp;Mono&nbsp;·&nbsp;Plex&nbsp;Sans
+      </p>
+      <p class="foot__col">
+        <span class="foot__label mono">REV</span>
+        <span id="last-edit">—</span>
+      </p>
+    </div>
+    <div class="foot__sig">
+      <p class="foot__epitaph">the future is yours.</p>
+      <p class="foot__copyright mono small">© <span id="year">2026</span> · Kylan&nbsp;Huynh · all rights reserved</p>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       Terminal — summoned by `, easter eggs included
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="terminal" id="terminal" hidden>
+    <div class="terminal__frame">
+      <div class="terminal__bar">
+        <span class="mono small">kylan@dossier ~ %</span>
+        <button class="terminal__close" id="terminal-close" aria-label="Close">[esc]</button>
+      </div>
+      <div class="terminal__body" id="terminal-body">
+        <div class="terminal__line">
+          <span class="terminal__prompt">$</span>
+          <span>welcome to dossier v1.0 · type <em>help</em> for commands.</span>
+        </div>
+      </div>
+      <form class="terminal__input" id="terminal-form">
+        <span class="terminal__prompt">$</span>
+        <input id="terminal-cmd" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="help"/>
+      </form>
+    </div>
+  </div>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>
