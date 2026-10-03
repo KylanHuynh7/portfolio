@@ -162,7 +162,7 @@
     ].join('<br/>'),
 
     about: () => [
-      'kylan huynh · sophomore → junior · uc san diego',
+      'kylan huynh · junior · uc san diego',
       'data science b.s. · class of 2028',
       '',
       'I work on small, careful things — sports analytics,',
