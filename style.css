@@ -973,3 +973,19 @@ section:first-of-type { border-top: 0; padding-top: clamp(56px, 8vw, 96px); }
   .skills > div { grid-template-columns: 1fr; gap: 4px; }
 }
 .section-bar h2.section-bar__label { margin: 0; font-size: inherit; }
+
+/* stacked roles at one organization (resume) */
+.resume-roles {
+  list-style: none; padding: 0; margin: 0 0 10px;
+  display: grid; gap: 4px;
+}
+.resume-roles li {
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 2px 24px; align-items: baseline;
+}
+.resume-roles__title { color: var(--ink-2); font-size: .94rem; font-style: italic; }
+.resume-roles .resume-entry__when { font-family: var(--mono); font-size: .76rem; color: var(--ink-3); letter-spacing: .06em; text-align: right; }
+@media (max-width: 640px) {
+  .resume-roles li { grid-template-columns: 1fr; }
+  .resume-roles .resume-entry__when { text-align: left; }
+}
