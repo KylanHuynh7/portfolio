@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="color-scheme" content="light" />
+  <meta name="color-scheme" content="light dark" />
   <title>Kylan Huynh: Personal site and portfolio</title>
   <meta name="description" content="Kylan Huynh — Data Science, UC San Diego. Sports analytics, research, and quietly built software." />
 
@@ -32,13 +32,6 @@
       <span class="cell__label">STATUS</span>
       <span class="cell__value"><span class="dot dot--live"></span>ONLINE</span>
     </div>
-    <nav class="scoreboard__nav" aria-label="Primary">
-      <a href="./" class="current" aria-current="page"><span class="nav__num">01&nbsp;</span>home</a>
-      <a href="projects/"><span class="nav__num">02&nbsp;</span>projects</a>
-      <a href="contact/"><span class="nav__num">03&nbsp;</span>contact</a>
-      <a href="resume/"><span class="nav__num">04&nbsp;</span>resume</a>
-      <a href="https://github.com/KylanHuynh7" target="_blank" rel="noopener noreferrer">github&nbsp;↗</a>
-    </nav>
   </header>
 
   <main>
@@ -104,11 +97,39 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════════
-         02 · LOG — quiet timeline
+         02 · LATEST PROJECTS — first 3 from lib/projects.json
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="latest" id="latest">
+      <div class="section-bar">
+        <span class="section-bar__num">§ 02</span>
+        <h2 class="section-bar__label">LATEST&nbsp;PROJECTS</h2>
+        <span class="section-bar__rule"></span>
+        <span class="section-bar__meta"><a href="projects/" class="link link--arrow">all&nbsp;projects</a></span>
+      </div>
+
+      <div class="projects"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         03 · GITHUB — live profile stats from the GitHub API
+         ═══════════════════════════════════════════════════════════ -->
+    <section class="github" id="github">
+      <div class="section-bar">
+        <span class="section-bar__num">§ 03</span>
+        <h2 class="section-bar__label">GITHUB</h2>
+        <span class="section-bar__rule"></span>
+        <span class="section-bar__meta">api.github.com · KylanHuynh7</span>
+      </div>
+
+      <div id="profile-stats"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         04 · LOG — quiet timeline
          ═══════════════════════════════════════════════════════════ -->
     <section class="log" id="log">
       <div class="section-bar">
-        <span class="section-bar__num">§ 02</span>
+        <span class="section-bar__num">§ 04</span>
         <h2 class="section-bar__label">LOG</h2>
         <span class="section-bar__rule"></span>
         <span class="section-bar__meta">2024 → present</span>
@@ -191,11 +212,11 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════════
-         03 · STACK — quiet inventory
+         05 · STACK — quiet inventory
          ═══════════════════════════════════════════════════════════ -->
     <section class="stack" id="stack">
       <div class="section-bar">
-        <span class="section-bar__num">§ 03</span>
+        <span class="section-bar__num">§ 05</span>
         <h2 class="section-bar__label">STACK</h2>
         <span class="section-bar__rule"></span>
         <span class="section-bar__meta">tools&nbsp;·&nbsp;languages</span>
@@ -230,11 +251,11 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════════
-         04 · NOW — Letterboxd-style consumption diary
+         06 · NOW — Letterboxd-style consumption diary
          ═══════════════════════════════════════════════════════════ -->
     <section class="now" id="now">
       <div class="section-bar">
-        <span class="section-bar__num">§ 04</span>
+        <span class="section-bar__num">§ 06</span>
         <h2 class="section-bar__label">NOW</h2>
         <span class="section-bar__rule"></span>
         <span class="section-bar__meta">UPDATED&nbsp;<span id="now-updated">—</span></span>
@@ -385,5 +406,7 @@
   </div>
 
   <script src="script.js" defer></script>
+  <script type="module" src="global.js"></script>
+  <script type="module" src="index.js" defer></script>
 </body>
 </html>

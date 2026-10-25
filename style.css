@@ -10,19 +10,19 @@
   --sans:   "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --serif:  "IBM Plex Serif", Georgia, serif;
 
-  --paper:   #fafaf9;     /* cool off-white */
-  --paper-2: #f3f2ef;     /* slightly recessed surface */
-  --surface: #ffffff;     /* pure white for cards */
-  --ink:     #0a0a0a;     /* near-black */
-  --ink-2:   #3d3d3b;     /* secondary text */
-  --ink-3:   #8a8a86;     /* labels, muted mono */
-  --rule:    #e6e4df;     /* hairlines */
-  --rule-2:  #d4d2cc;     /* slightly stronger rule */
-  --color-accent: oklch(38% 0.12 25);   /* muted oxblood — the only color */
+  /* light-dark(light value, dark value) follows the page's color-scheme */
+  --paper:   light-dark(#fafaf9, #0e0e0d);   /* cool off-white / near-black */
+  --paper-2: light-dark(#f3f2ef, #161615);   /* slightly recessed surface */
+  --surface: light-dark(#ffffff, #1b1b1a);   /* cards */
+  --ink:     light-dark(#0a0a0a, #ecebe7);   /* body text */
+  --ink-2:   light-dark(#3d3d3b, #b9b7b1);   /* secondary text */
+  --ink-3:   light-dark(#8a8a86, #7f7d78);   /* labels, muted mono */
+  --rule:    light-dark(#e6e4df, #272725);   /* hairlines */
+  --rule-2:  light-dark(#d4d2cc, #363532);   /* slightly stronger rule */
+  --color-accent: light-dark(oklch(38% 0.12 25), oklch(68% 0.13 25));   /* muted oxblood — the only color */
   --accent:  var(--color-accent);
-  --accent-2:#5a1212;     /* darker hover */
-  --hl:      #f1e7d0;     /* very pale highlight (for hl span) */
-  --nav-rule: oklch(80% 3% 200);        /* cool gray */
+  --accent-2:light-dark(#5a1212, oklch(78% 0.1 25));   /* hover */
+  --hl:      light-dark(#f1e7d0, #3a2f1c);   /* pale highlight (for hl span) */
 
   --max:     68rem;
   --gutter:  clamp(20px, 4vw, 56px);
@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 { font-size: 400%; }   /* clear hierarchy over h2 */
 html {
+  color-scheme: light dark;           /* follow the OS until the theme switcher says otherwise */
   scroll-behavior: smooth;
   scroll-padding-top: 96px;          /* keep anchor targets clear of the sticky header */
   -webkit-text-size-adjust: 100%;     /* stop iOS enlarging text in landscape */
@@ -64,6 +65,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-weight: 400;
+  position: relative;                 /* anchors the absolutely positioned theme switcher */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -138,11 +140,13 @@ kbd {
 
 /* nav: its own full-width row under the status cells */
 .scoreboard__nav {
+  --border-color: oklch(50% 10% 200 / 40%);
   grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--nav-rule);
+  border-bottom: 1px solid;
+  border-bottom-color: var(--border-color);
   font-family: var(--mono); font-size: .72rem; letter-spacing: .04em;
   color: var(--ink-2);
 }
@@ -158,18 +162,38 @@ kbd {
 }
 .scoreboard__nav a.current {
   color: var(--ink); font-weight: 600;
-  border-bottom: .4em solid var(--nav-rule);
+  border-bottom: .4em solid var(--border-color);
   padding-bottom: .1em;        /* offsets the thicker border so the row height stays put */
 }
 .scoreboard__nav a:hover {
   color: var(--ink);
   border-bottom: .4em solid var(--color-accent);
   padding-bottom: .1em;
-  background-color: color-mix(in srgb, var(--color-accent) 6%, var(--paper));
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+
+/* ── theme switcher (inserted by global.js) ── */
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 101;                /* above the sticky scoreboard */
+  display: flex; align-items: center; gap: .5em;
+  font-family: var(--mono);
+  font-size: 80%;
+  letter-spacing: .04em;
+  color: var(--ink-3);
+}
+.color-scheme select {
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--rule-2);
+  padding: 2px 4px;
 }
 
 @media (max-width: 920px) {
+  /* no free cell in the 2-column scoreboard: sit in its own row above it */
+  .color-scheme { position: static; justify-content: flex-end; padding: 10px 0 4px; }
   .scoreboard { grid-template-columns: 1fr 1fr; }
   .scoreboard__cell:nth-child(3) { display: none; }
   .scoreboard__nav a { padding-block: .9em; }               /* bigger tap targets */
@@ -680,6 +704,53 @@ section:first-of-type { border-top: 0; padding-top: clamp(56px, 8vw, 96px); }
     font-size: .9rem;
     color: var(--ink-2);
   }
+
+  .projects__empty {
+    grid-column: 1 / -1;
+    font-family: var(--mono);
+    color: var(--ink-3);
+  }
+}
+
+/* ═════════════════════════════════════════════════════════════════
+   GitHub profile stats — 4 equal columns, labels row 1, values row 2
+   ═════════════════════════════════════════════════════════════════ */
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+  border: 1px solid var(--rule-2);
+  background: var(--surface);
+
+  dt, dd {
+    margin: 0;
+    padding: 0 20px;
+    border-left: 1px solid var(--rule);
+  }
+  dt:first-of-type, dd:first-of-type { border-left: 0; }
+
+  dt {
+    grid-row: 1;
+    padding-top: 18px;
+    font-family: var(--mono);
+    font-size: .72rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  dd {
+    grid-row: 2;
+    padding-bottom: 18px;
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    color: var(--ink);
+  }
+}
+@media (max-width: 520px) {
+  #profile-stats dl dt, #profile-stats dl dd { padding-left: 10px; padding-right: 10px; }
+  #profile-stats dl dt { font-size: .6rem; letter-spacing: .08em; }
 }
 
 /* ═════════════════════════════════════════════════════════════════
@@ -975,7 +1046,8 @@ section:first-of-type { border-top: 0; padding-top: clamp(56px, 8vw, 96px); }
 }
 .contact-form input,
 .contact-form textarea,
-.contact-form button {
+.contact-form button,
+select {
   font: inherit;                     /* form controls don't inherit page typography by default */
 }
 .contact-form input,

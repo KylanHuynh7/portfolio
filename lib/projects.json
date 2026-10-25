@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Lab 4: JavaScript II",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "This grid, rendered from a JSON file with ES modules and template literals, plus live GitHub profile stats on the home page."
+  },
+  {
+    "title": "Lab 3: Introduction to JS",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A JavaScript-built nav that highlights the current page, a light/dark theme switcher saved in localStorage, and a contact form that writes a mailto: link."
+  },
+  {
+    "title": "Lab 2: Styling with CSS",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Flexbox navigation, a subgrid contact form, and this responsive project grid."
+  },
+  {
+    "title": "Lab 1: Introduction to the Web Platform",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A multi-page personal site in plain HTML: home, projects, contact form, and resume, published with GitHub Pages."
+  },
+  {
+    "title": "Nash",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A full-stack team-balancing and player-rating app, live on Vercel."
+  },
+  {
+    "title": "FloodIQ",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Flood-risk scoring for any U.S. address from FEMA flood maps and NOAA sea-level projections. DataHacks 2026 winner."
+  },
+  {
+    "title": "Variance97",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "What actually explains McDavid's Stanley Cup Finals point drop? Hypothesis tests, a Ridge model, and a live Streamlit dashboard."
+  },
+  {
+    "title": "MonsterAdjustment",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Roki Sasaki's rookie arc: splitter shape, velocity dip, and what translates from NPB to MLB."
+  },
+  {
+    "title": "SayStroop",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A web-based Stroop-effect experiment with live Whisper speech recognition, built for participant studies."
+  },
+  {
+    "title": "Basketball Scouting Dashboard",
+    "year": "2025",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Transfer-candidate research and a player scouting dashboard for UC San Diego Athletics basketball."
+  },
+  {
+    "title": "Lab 5: Visualizing Categorical Data with D3",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Coming soon."
+  },
+  {
+    "title": "Lab 6: Visualizing Quantitative Data with D3",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Coming soon."
+  }
+]

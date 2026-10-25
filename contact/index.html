@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="color-scheme" content="light" />
+  <meta name="color-scheme" content="light dark" />
   <title>Contact · Kylan Huynh</title>
   <meta name="description" content="Get in touch with Kylan Huynh." />
 
@@ -32,13 +32,6 @@
       <span class="cell__label">STATUS</span>
       <span class="cell__value"><span class="dot dot--live"></span>ONLINE</span>
     </div>
-    <nav class="scoreboard__nav" aria-label="Primary">
-      <a href="../"><span class="nav__num">01&nbsp;</span>home</a>
-      <a href="../projects/"><span class="nav__num">02&nbsp;</span>projects</a>
-      <a href="../contact/" class="current" aria-current="page"><span class="nav__num">03&nbsp;</span>contact</a>
-      <a href="../resume/"><span class="nav__num">04&nbsp;</span>resume</a>
-      <a href="https://github.com/KylanHuynh7" target="_blank" rel="noopener noreferrer">github&nbsp;↗</a>
-    </nav>
   </header>
 
   <main>
@@ -64,11 +57,7 @@
           think I'd find interesting.
         </p>
 
-        <form class="contact-form" action="mailto:huynh.kylan7@gmail.com" method="POST" enctype="text/plain">
-          <label>
-            Email
-            <input type="email" name="email" required />
-          </label>
+        <form class="contact-form" action="mailto:huynh.kylan7@gmail.com">
           <label>
             Subject
             <input name="subject" />
@@ -150,5 +139,6 @@
   </div>
 
   <script src="../script.js" defer></script>
+  <script type="module" src="../global.js"></script>
 </body>
 </html>
