@@ -63,7 +63,7 @@
     "title": "Lab 5: Visualizing Categorical Data with D3",
     "year": "2026",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Coming soon."
+    "description": "A D3 pie chart of projects per year with a legend, live search, and click-to-filter wedges that combine with the search."
   },
   {
     "title": "Lab 6: Visualizing Quantitative Data with D3",

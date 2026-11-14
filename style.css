@@ -710,6 +710,99 @@ section:first-of-type { border-top: 0; padding-top: clamp(56px, 8vw, 96px); }
     font-family: var(--mono);
     color: var(--ink-3);
   }
+
+  .project-year {
+    margin-top: .5em;
+    font-family: var(--mono);
+    font-size: .8rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-3);
+  }
+}
+
+/* ═════════════════════════════════════════════════════════════════
+   Projects per year — D3 pie + legend side by side (Lab 5).
+   Hovering a wedge fades the others; a click selects it.
+   ═════════════════════════════════════════════════════════════════ */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-block: 1.5em 2em;
+}
+
+#projects-pie-plot {
+  flex: none;
+  width: 100%;
+  max-width: 14em;
+  overflow: visible;
+
+  &:has(path:hover) path:not(:hover) { opacity: .5; }
+
+  path {
+    cursor: pointer;
+    stroke: var(--paper);
+    stroke-width: .5;
+    transition: opacity 300ms, fill 300ms;
+  }
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) { fill: var(--color); }
+}
+
+.legend {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: .75em 1.5em;
+  margin: 0;
+  padding: 1em 1.25em;
+  list-style: none;
+  border: 1px solid var(--rule-2);
+  background: var(--surface);
+  font-family: var(--mono);
+  font-size: .85rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    cursor: pointer;
+  }
+
+  li.selected { font-weight: 600; }
+
+  em { font-style: normal; color: var(--ink-3); }
+
+  .swatch {
+    flex: none;
+    width: 1em;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: var(--color);
+  }
+}
+
+.searchBar {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5em;
+  padding: 10px 12px;
+  font: 1rem var(--sans);
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--rule-2);
+  border-radius: 0;
+
+  &:focus { border-color: var(--ink); outline: none; }
+}
+
+@media (max-width: 560px) {
+  .container { flex-direction: column; align-items: stretch; }
+  #projects-pie-plot { align-self: center; max-width: 12em; }
 }
 
 /* ═════════════════════════════════════════════════════════════════
