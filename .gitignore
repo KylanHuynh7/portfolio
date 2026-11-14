@@ -4,3 +4,6 @@
 # Editor / tooling
 .claude/
 .playwright-mcp/
+
+# Dependencies (Lab 6)
+node_modules/

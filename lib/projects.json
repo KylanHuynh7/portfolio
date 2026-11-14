@@ -1,5 +1,25 @@
 [
   {
+    "title": "Lab 7: Bikewatching",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "An interactive Mapbox + D3 map of Bluebikes traffic in Boston and Cambridge, with bike lanes, station circles sized by traffic, and a time-of-day filter.",
+    "url": "https://kylanhuynh7.github.io/bikewatching/"
+  },
+  {
+    "title": "Lab 6: Visualizing Quantitative Data with D3",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A meta page about this site's own code: summary stats, a commit scatterplot by date and time of day, tooltips, and brushing to see a language breakdown.",
+    "url": "https://kylanhuynh7.github.io/portfolio/meta/"
+  },
+  {
+    "title": "Lab 5: Visualizing Categorical Data with D3",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "A D3 pie chart of projects per year with a legend, live search, and click-to-filter wedges that combine with the search."
+  },
+  {
     "title": "Lab 4: JavaScript II",
     "year": "2026",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
@@ -58,17 +78,5 @@
     "year": "2025",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",
     "description": "Transfer-candidate research and a player scouting dashboard for UC San Diego Athletics basketball."
-  },
-  {
-    "title": "Lab 5: Visualizing Categorical Data with D3",
-    "year": "2026",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "A D3 pie chart of projects per year with a legend, live search, and click-to-filter wedges that combine with the search."
-  },
-  {
-    "title": "Lab 6: Visualizing Quantitative Data with D3",
-    "year": "2026",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Coming soon."
   }
 ]

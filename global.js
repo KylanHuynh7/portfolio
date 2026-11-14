@@ -11,6 +11,10 @@
    - fetchGitHubData:  public profile data from the GitHub API
    Lab 5
    - renderProjects:   each project's year sits under its description
+   Lab 6
+   - nav:              new "meta" page (stats about this site's code)
+   Lab 7
+   - renderProjects:   projects with a `url` link their title to it
    ═════════════════════════════════════════════════════════════════ */
 
 console.log('IT’S ALIVE!');
@@ -25,6 +29,7 @@ const pages = [
   { url: 'projects/',                       title: 'projects' },
   { url: 'contact/',                        title: 'contact' },
   { url: 'resume/',                         title: 'resume' },
+  { url: 'meta/',                           title: 'meta' },
   { url: 'https://github.com/KylanHuynh7', title: 'github ↗' },
 ];
 
@@ -150,8 +155,13 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
 
   for (const project of projects) {
     const article = document.createElement('article');
+    const title = project.title ?? 'Untitled project';
+    // Lab 7: only projects that have a `url` get a link
+    const heading = project.url
+      ? `<a href="${project.url}" target="_blank" rel="noopener noreferrer">${title} ↗</a>`
+      : title;
     article.innerHTML = `
-      <${headingLevel}>${project.title ?? 'Untitled project'}</${headingLevel}>
+      <${headingLevel}>${heading}</${headingLevel}>
       <img src="${project.image ?? 'https://vis-society.github.io/labs/2/images/empty.svg'}" alt="${project.title ?? ''}" />
       <div>
         <p>${project.description ?? ''}</p>
