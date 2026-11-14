@@ -1,5 +1,12 @@
 [
   {
+    "title": "Lab 8: Animation & Scrollytelling",
+    "year": "2026",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "The meta page as a scrolling story: the commit scatterplot fills in as you scroll, with a time slider and a dot-per-line view of every file.",
+    "url": "https://kylanhuynh7.github.io/portfolio/meta/"
+  },
+  {
     "title": "Lab 7: Bikewatching",
     "year": "2026",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",

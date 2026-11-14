@@ -37,7 +37,7 @@
   <main>
 
     <!-- ═══════════════════════════════════════════════════════════════
-         META — stats about this site's own code (Lab 6)
+         META — stats about this site's own code (Labs 6 + 8)
          ═══════════════════════════════════════════════════════════ -->
     <section class="meta" id="meta">
       <h1 class="page-title">Meta</h1>
@@ -47,6 +47,13 @@
         there is, how it is spread across files, and when I actually sat
         down to write it.
       </p>
+
+      <!-- Lab 8 · filter everything on this page by commit time -->
+      <label class="time-filter" for="commit-progress">
+        <span>Show commits until:</span>
+        <input type="range" id="commit-progress" min="0" max="100" value="100" />
+        <time id="commit-time"></time>
+      </label>
 
       <div class="section-bar">
         <span class="section-bar__num">§ 01</span>
@@ -61,13 +68,30 @@
         <span class="section-bar__num">§ 02</span>
         <h2 class="section-bar__label">COMMITS&nbsp;BY&nbsp;TIME&nbsp;OF&nbsp;DAY</h2>
         <span class="section-bar__rule"></span>
-        <span class="section-bar__meta">drag&nbsp;to&nbsp;select</span>
+        <span class="section-bar__meta">scroll&nbsp;·&nbsp;drag&nbsp;to&nbsp;select</span>
       </div>
 
-      <div id="chart"></div>
+      <!-- Lab 8 · scrollytelling: the story scrolls, the chart stays put -->
+      <div id="scrolly-1">
+        <div id="scatter-story"></div>
 
-      <p id="selection-count">No commits selected</p>
-      <dl id="language-breakdown" class="stats"></dl>
+        <div id="scatter-plot">
+          <div id="chart"></div>
+
+          <p id="selection-count">No commits selected</p>
+          <dl id="language-breakdown" class="stats"></dl>
+        </div>
+      </div>
+
+      <div class="section-bar meta__bar">
+        <span class="section-bar__num">§ 03</span>
+        <h2 class="section-bar__label">FILES&nbsp;BY&nbsp;SIZE</h2>
+        <span class="section-bar__rule"></span>
+        <span class="section-bar__meta">one&nbsp;dot&nbsp;per&nbsp;line</span>
+      </div>
+
+      <!-- Lab 8 · unit visualization: one dot per line of code, colored by language -->
+      <dl id="files"></dl>
     </section>
 
     <!-- tooltip for the hovered commit; hidden until a dot is hovered -->
@@ -79,7 +103,7 @@
       <dd id="commit-date"></dd>
 
       <dt>Time</dt>
-      <dd id="commit-time"></dd>
+      <dd id="commit-tooltip-time"></dd>
 
       <dt>Author</dt>
       <dd id="commit-author"></dd>
