@@ -9,7 +9,7 @@
   {
     "title": "Lab 7: Bikewatching",
     "year": "2026",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "image": "https://kylanhuynh7.github.io/portfolio/images/bikewatching.png",
     "description": "An interactive Mapbox + D3 map of Bluebikes traffic in Boston and Cambridge, with bike lanes, station circles sized by traffic, and a time-of-day filter.",
     "url": "https://kylanhuynh7.github.io/bikewatching/"
   },
